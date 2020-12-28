@@ -36,6 +36,9 @@ public class donor_list extends AppCompatActivity {
 
 
         /*---------------------Hooks and other stuff for back button------------------------------*/
+
+
+
         recview_donor = (RecyclerView)findViewById(R.id.recview_donor);
         recview_donor.setLayoutManager(new LinearLayoutManager(this));
         /*----------------------------------------------------------------------------------------*/
