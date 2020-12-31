@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".charity_to_second_activity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
@@ -146,7 +139,6 @@
             app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
