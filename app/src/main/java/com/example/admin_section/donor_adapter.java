@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,7 +38,25 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
             @Override
             public void onClick(View v) {
                   final DialogPlus dialogPlus = DialogPlus.newDialog(holder.donor_name.getContext())
-                          .setContentHolder(new ViewHolder());
+                          .setContentHolder(new ViewHolder(R.layout.edit_dialog_context))
+                          .setExpanded(true,2100)
+                          .create();
+                  View myview = dialogPlus.getHolderView();
+
+                EditText Purl =  myview.findViewById(R.id.imgURL);
+                EditText name =  myview.findViewById(R.id.Name);
+                EditText email =  myview.findViewById(R.id.email);
+                EditText password =  myview.findViewById(R.id.password);
+
+                EditText phone =  myview.findViewById(R.id.phone);
+                EditText Profession =  myview.findViewById(R.id.profession);
+                EditText status =  myview.findViewById(R.id.status);
+                EditText thumburl =  myview.findViewById(R.id.thumburl);
+
+                Button update = myview.findViewById(R.id.update);
+
+                ////you left here (you want to add a getter and setter of all edit fields and write here)
+
             }
         });
 
