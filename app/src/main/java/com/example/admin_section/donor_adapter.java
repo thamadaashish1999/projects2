@@ -28,7 +28,7 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
         holder.profession.setText(model.getProfession());
         holder.email.setText(model.getEmail());
 
-        //delete operation
+        //delete operation for donor section
 
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override

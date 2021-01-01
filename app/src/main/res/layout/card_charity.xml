@@ -27,7 +27,7 @@
 
 
             <ImageView
-                android:id="@+id/delete_donor"
+                android:id="@+id/delete_charity"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
