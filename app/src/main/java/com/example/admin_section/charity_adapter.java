@@ -35,6 +35,12 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
             holder.email.setText(model.getEmail());
 
 
+            //edit operation for charity section
+
+
+
+
+
             //delete operation for charity section
 
         holder.delete1.setOnClickListener(new View.OnClickListener() {

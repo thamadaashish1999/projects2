@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 
 public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_adapter.myviewholder> {
 
@@ -22,11 +24,23 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull donor_adapter.myviewholder holder, int position, @NonNull model_donor model) {
+    protected void onBindViewHolder(@NonNull donor_adapter.myviewholder holder, final int position, @NonNull model_donor model) {
 
         holder.donor_name.setText(model.getDonor_name());
         holder.profession.setText(model.getProfession());
         holder.email.setText(model.getEmail());
+
+        //edit operation for donor section
+
+        holder.edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                  final DialogPlus dialogPlus = DialogPlus.newDialog(holder.donor_name.getContext())
+                          .setContentHolder(new ViewHolder());
+            }
+        });
+
+
 
         //delete operation for donor section
 
@@ -71,7 +85,7 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
     class myviewholder extends RecyclerView.ViewHolder{
 
         TextView donor_name,profession,email;
-        ImageView delete;
+        ImageView delete,edit;
 
         public myviewholder(@NonNull View itemView){
 
@@ -80,6 +94,7 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
             profession=(TextView)itemView.findViewById(R.id.profession);
             email = (TextView)itemView.findViewById(R.id.Email);
 
+            edit = (ImageView) itemView.findViewById(R.id.edit_donor);
             delete = (ImageView) itemView.findViewById(R.id.delete_donor);
         }
 
