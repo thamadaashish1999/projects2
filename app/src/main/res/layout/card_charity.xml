@@ -26,6 +26,19 @@
             android:layout_height="match_parent">
 
 
+            <ImageView
+                android:id="@+id/delete_donor"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_baseline_delete_24"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_donor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toEndOf="@+id/edit_charity"
+                app:layout_constraintTop_toTopOf="@+id/edit_charity"
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/register_number"
                 android:layout_width="wrap_content"
@@ -60,14 +73,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="144dp"
-                android:layout_marginLeft="144dp"
                 android:layout_marginTop="15dp"
                 android:padding="5dp"
                 android:text="Email"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/Emaill"
-                app:layout_constraintTop_toBottomOf="@+id/register_number" />
+                app:layout_constraintTop_toBottomOf="@+id/register_number"
+                app:layout_constraintVertical_bias="0.014" />
 
             <TextView
                 android:id="@+id/Name"
@@ -115,6 +128,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/registerr"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/edit_charity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="96dp"
+                android:layout_marginLeft="96dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Emaill"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
