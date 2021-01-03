@@ -13,17 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="1dp">
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:outlineProvider="background"
+        >
 
 
         <ImageView
             android:id="@+id/edit_donor"
             android:layout_width="30dp"
             android:layout_height="30dp"
-
-            android:layout_marginLeft="96dp"
-            android:layout_marginTop="470dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="490dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/ic_baseline_edit_24" />
 
@@ -32,7 +33,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="200dp"
-            android:layout_marginTop="470dp"
+            android:layout_marginTop="490dp"
             android:src="@drawable/ic_baseline_delete_24" />
 
         <TextView
