@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,8 +19,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
+import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,charity_adapter.myviewholder> {
@@ -46,6 +54,70 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
 
 
             //edit operation for charity section
+        holder.edit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.charity_name.getContext())
+                        .setContentHolder(new ViewHolder(R.layout.edit_dialog_context_charity))
+                        .setExpanded(true,2100)
+                        .create();
+                View myview = dialogPlus.getHolderView();
+
+                EditText image =  myview.findViewById(R.id.imgURL);
+                EditText donor_name =  myview.findViewById(R.id.Name);
+                EditText email =  myview.findViewById(R.id.email);
+                EditText password =  myview.findViewById(R.id.password);
+
+                EditText phone =  myview.findViewById(R.id.phone);
+                EditText profession =  myview.findViewById(R.id.profession);
+                EditText status =  myview.findViewById(R.id.status);
+                EditText thumb_image =  myview.findViewById(R.id.thumburl);
+
+
+                image.setText(model.getImage());
+                donor_name.setText(model.getDonor_name());
+                email.setText(model.getEmail());
+                password.setText(model.getPassword());
+                phone.setText(model.getPhone());
+                profession.setText(model.getProfession());
+                status.setText(model.getStatus());
+                thumb_image.setText(model.getThumb_image());
+
+                dialogPlus.show();
+
+                Button update = myview.findViewById(R.id.update);
+
+                update.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Map<String,Object> map = new HashMap<>();
+                        map.put("image",image.getText().toString());
+                        map.put("donor_name",donor_name.getText().toString());
+                        map.put("email",email.getText().toString());
+                        map.put("password",password.getText().toString());
+                        map.put("phone",phone.getText().toString());
+                        map.put("profession",profession.getText().toString());
+                        map.put("status",status.getText().toString());
+                        map.put("thumb_image",thumb_image.getText().toString());
+
+                        FirebaseDatabase.getInstance().getReference().child("Users").child("Donor").child(getRef(position).getKey()).
+                                updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                dialogPlus.dismiss();
+                            }
+                        })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        dialogPlus.dismiss();
+                                    }
+                                });
+                    }
+                });
+
+            }
+        });
 
 
 
