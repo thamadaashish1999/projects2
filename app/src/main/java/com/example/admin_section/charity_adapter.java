@@ -64,24 +64,35 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
                 View myview = dialogPlus.getHolderView();
 
                 EditText image =  myview.findViewById(R.id.imgURL);
-                EditText donor_name =  myview.findViewById(R.id.Name);
+                EditText charity_name =  myview.findViewById(R.id.Name);
                 EditText email =  myview.findViewById(R.id.email);
                 EditText password =  myview.findViewById(R.id.password);
 
                 EditText phone =  myview.findViewById(R.id.phone);
-                EditText profession =  myview.findViewById(R.id.profession);
+                EditText description =  myview.findViewById(R.id.description);
                 EditText status =  myview.findViewById(R.id.status);
                 EditText thumb_image =  myview.findViewById(R.id.thumburl);
+                EditText charity_address =  myview.findViewById(R.id.address);
+                EditText requirement =  myview.findViewById(R.id.requirement);
+                EditText post_image =  myview.findViewById(R.id.post_image);
+                EditText post_description =  myview.findViewById(R.id.post_description);
+
 
 
                 image.setText(model.getImage());
-                donor_name.setText(model.getDonor_name());
+                charity_name.setText(model.getCharity_name());
                 email.setText(model.getEmail());
                 password.setText(model.getPassword());
                 phone.setText(model.getPhone());
-                profession.setText(model.getProfession());
+                description.setText(model.getDescription());
                 status.setText(model.getStatus());
                 thumb_image.setText(model.getThumb_image());
+                charity_address.setText(model.getCharity_address());
+                requirement.setText(model.getRequirements());
+                post_image.setText(model.getPost_image());
+                post_description.setText(model.getPost_description());
+
+
 
                 dialogPlus.show();
 
@@ -92,15 +103,19 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
                     public void onClick(View v) {
                         Map<String,Object> map = new HashMap<>();
                         map.put("image",image.getText().toString());
-                        map.put("donor_name",donor_name.getText().toString());
+                        map.put("charity_name",charity_name.getText().toString());
                         map.put("email",email.getText().toString());
                         map.put("password",password.getText().toString());
                         map.put("phone",phone.getText().toString());
-                        map.put("profession",profession.getText().toString());
+                        map.put("description",description.getText().toString());
                         map.put("status",status.getText().toString());
+                        map.put("charity_address",charity_address.getText().toString());
+                        map.put("requirement",requirement.getText().toString());
+                        map.put("post_image",post_image.getText().toString());
+                        map.put("post_description",post_description.getText().toString());
                         map.put("thumb_image",thumb_image.getText().toString());
 
-                        FirebaseDatabase.getInstance().getReference().child("Users").child("Donor").child(getRef(position).getKey()).
+                        FirebaseDatabase.getInstance().getReference().child("Users").child("Charity").child(getRef(position).getKey()).
                                 updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {

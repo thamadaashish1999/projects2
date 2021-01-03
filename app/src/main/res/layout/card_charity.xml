@@ -60,8 +60,8 @@
                  />
         <TextView
             android:id="@+id/addresss"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="183dp"
             android:text="Adress"
@@ -69,8 +69,8 @@
             />
         <TextView
             android:id="@+id/descriptionn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="243dp"
             android:text="Description"
@@ -78,8 +78,8 @@
             />
         <TextView
             android:id="@+id/imagee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="303dp"
             android:text="Image"
@@ -105,8 +105,8 @@
             />
         <TextView
             android:id="@+id/requirementt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="483dp"
             android:text="Requirement"
@@ -123,8 +123,8 @@
             />
         <TextView
             android:id="@+id/post_imagee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="603dp"
             android:text="Post Image"
@@ -132,8 +132,8 @@
             />
         <TextView
             android:id="@+id/post_descriptionn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="663dp"
             android:text="Post Description"
@@ -141,8 +141,8 @@
             />
         <TextView
             android:id="@+id/thumb_imagee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="723dp"
             android:text="Thumb Image"
