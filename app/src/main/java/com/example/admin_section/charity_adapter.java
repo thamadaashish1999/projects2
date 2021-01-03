@@ -46,7 +46,7 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
             holder.image.setText(model.getImage());
             holder.password.setText(model.getEmail());
             holder.phone.setText(model.getPhone());
-            holder.requirements.setText(model.getRequirements());
+            holder.requirement.setText(model.getRequirement());
             holder.status.setText(model.getStatus());
             holder.post_description.setText(model.getPost_description());
             holder.post_image.setText(model.getPost_image());
@@ -88,7 +88,7 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
                 status.setText(model.getStatus());
                 thumb_image.setText(model.getThumb_image());
                 charity_address.setText(model.getCharity_address());
-                requirement.setText(model.getRequirements());
+                requirement.setText(model.getRequirement());
                 post_image.setText(model.getPost_image());
                 post_description.setText(model.getPost_description());
 
@@ -176,7 +176,7 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
 
     class myviewholder extends RecyclerView.ViewHolder{
 
-        TextView charityReg,charity_name,email,charity_address,description,image,password,phone,post_description,post_image,requirements,status,thumb_image;
+        TextView charityReg,charity_name,email,charity_address,description,image,password,phone,post_description,post_image,requirement,status,thumb_image;
         ImageView delete1,edit1;
         public myviewholder(@NonNull View itemView){
 
@@ -191,7 +191,7 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
             phone = (TextView)itemView.findViewById(R.id.phonee);
             post_description = (TextView)itemView.findViewById(R.id.post_descriptionn);
             post_image = (TextView)itemView.findViewById(R.id.post_imagee);
-            requirements = (TextView)itemView.findViewById(R.id.requirementt);
+            requirement = (TextView)itemView.findViewById(R.id.requirementt);
             status = (TextView)itemView.findViewById(R.id.statuss);
             thumb_image = (TextView)itemView.findViewById(R.id.thumb_imagee);
 

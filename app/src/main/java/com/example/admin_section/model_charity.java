@@ -2,13 +2,13 @@ package com.example.admin_section;
 
 public class model_charity {
 
-    String charity_name,charityReg,email,charity_address,description,image,password,phone,post_description,post_image,requirements,status,thumb_image;;
+    String charity_name,charityReg,email,charity_address,description,image,password,phone,post_description,post_image,requirement,status,thumb_image;;
 
     model_charity(){
 
     }
     public model_charity(String charity_name, String charityReg, String email,String charity_adderss,String description,String image,String password,String phone,
-                         String post_description,String post_image,String requirements,String status,String thumb_image ) {
+                         String post_description,String post_image,String requirement,String status,String thumb_image ) {
 
         this.charity_name = charity_name;
         this.charityReg = charityReg;
@@ -20,7 +20,7 @@ public class model_charity {
         this.phone=phone;
         this.post_description=post_description;
         this.post_image=post_image;
-        this.requirements=requirements;
+        this.requirement=requirement;
         this.status=status;
         this.thumb_image=thumb_image;
     }
@@ -81,12 +81,12 @@ public class model_charity {
         this.post_image = post_image;
     }
 
-    public String getRequirements() {
-        return requirements;
+    public String getRequirement() {
+        return requirement;
     }
 
-    public void setRequirements(String requirements) {
-        this.requirements = requirements;
+    public void setRequirement(String requirement) {
+        this.requirement = requirement;
     }
 
     public String getStatus() {
@@ -128,4 +128,5 @@ public class model_charity {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
