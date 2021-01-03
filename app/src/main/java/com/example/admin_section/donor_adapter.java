@@ -15,9 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_adapter.myviewholder> {
 
@@ -31,6 +36,12 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
         holder.donor_name.setText(model.getDonor_name());
         holder.profession.setText(model.getProfession());
         holder.email.setText(model.getEmail());
+        holder.image.setText(model.getImage());
+        holder.password.setText(model.getPassword());
+        holder.phone.setText(model.getPhone());
+        holder.status.setText(model.getStatus());
+        holder.thumb_image.setText(model.getThumb_image());
+
 
         //edit operation for donor section
 
@@ -43,19 +54,58 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
                           .create();
                   View myview = dialogPlus.getHolderView();
 
-                EditText Purl =  myview.findViewById(R.id.imgURL);
-                EditText name =  myview.findViewById(R.id.Name);
+                EditText image =  myview.findViewById(R.id.imgURL);
+                EditText donor_name =  myview.findViewById(R.id.Name);
                 EditText email =  myview.findViewById(R.id.email);
                 EditText password =  myview.findViewById(R.id.password);
 
                 EditText phone =  myview.findViewById(R.id.phone);
-                EditText Profession =  myview.findViewById(R.id.profession);
+                EditText profession =  myview.findViewById(R.id.profession);
                 EditText status =  myview.findViewById(R.id.status);
-                EditText thumburl =  myview.findViewById(R.id.thumburl);
+                EditText thumb_image =  myview.findViewById(R.id.thumburl);
+
+
+                image.setText(model.getImage());
+                donor_name.setText(model.getDonor_name());
+                email.setText(model.getEmail());
+                password.setText(model.getPassword());
+                phone.setText(model.getPhone());
+                profession.setText(model.getProfession());
+                status.setText(model.getStatus());
+                thumb_image.setText(model.getThumb_image());
+
+                dialogPlus.show();
 
                 Button update = myview.findViewById(R.id.update);
 
-                ////you left here (you want to add a getter and setter of all edit fields and write here)
+                        update.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Map<String,Object> map = new HashMap<>();
+                                map.put("image",image.getText().toString());
+                                map.put("donor_name",donor_name.getText().toString());
+                                map.put("email",email.getText().toString());
+                                map.put("password",password.getText().toString());
+                                map.put("phone",phone.getText().toString());
+                                map.put("profession",profession.getText().toString());
+                                map.put("status",status.getText().toString());
+                                map.put("thumb_image",thumb_image.getText().toString());
+
+                                FirebaseDatabase.getInstance().getReference().child("Users").child("Donor").child(getRef(position).getKey()).
+                                        updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                                dialogPlus.dismiss();
+                                    }
+                                })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                dialogPlus.dismiss();
+                                            }
+                                        });
+                            }
+                        });
 
             }
         });
@@ -104,7 +154,7 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
 
     class myviewholder extends RecyclerView.ViewHolder{
 
-        TextView donor_name,profession,email;
+        TextView donor_name,profession,email,image,password,phone,status,thumb_image;
         ImageView delete,edit;
 
         public myviewholder(@NonNull View itemView){
@@ -113,6 +163,14 @@ public class donor_adapter  extends FirebaseRecyclerAdapter <model_donor,donor_a
             donor_name=(TextView)itemView.findViewById(R.id.NGOs_Lists_txt);
             profession=(TextView)itemView.findViewById(R.id.profession);
             email = (TextView)itemView.findViewById(R.id.Email);
+            image = (TextView)itemView.findViewById(R.id.imagee);
+            password = (TextView)itemView.findViewById(R.id.passwordd);
+            phone = (TextView)itemView.findViewById(R.id.phonee);
+            status = (TextView)itemView.findViewById(R.id.statuss);
+            thumb_image = (TextView)itemView.findViewById(R.id.thumb_imagee);
+
+
+
 
             edit = (ImageView) itemView.findViewById(R.id.edit_donor);
             delete = (ImageView) itemView.findViewById(R.id.delete_donor);
