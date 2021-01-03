@@ -79,17 +79,29 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
 
     class myviewholder extends RecyclerView.ViewHolder{
 
-        TextView charityReg,charity_name,email;
-        ImageView delete1;
+        TextView charityReg,charity_name,email,charity_address,description,image,password,phone,post_description,post_image,requirements,status,thumb_image;
+        ImageView delete1,edit1;
         public myviewholder(@NonNull View itemView){
 
             super(itemView);
             charityReg=(TextView)itemView.findViewById(R.id.register_number);
             charity_name=(TextView)itemView.findViewById(R.id.NGOs_Lists_txt);
             email = (TextView)itemView.findViewById(R.id.Email);
+            charity_address = (TextView)itemView.findViewById(R.id.addresss);
+            description = (TextView)itemView.findViewById(R.id.descriptionn);
+            image = (TextView)itemView.findViewById(R.id.imagee);
+            password = (TextView)itemView.findViewById(R.id.passwordd);
+            phone = (TextView)itemView.findViewById(R.id.phonee);
+            post_description = (TextView)itemView.findViewById(R.id.post_descriptionn);
+            post_image = (TextView)itemView.findViewById(R.id.post_imagee);
+            requirements = (TextView)itemView.findViewById(R.id.requirementt);
+            status = (TextView)itemView.findViewById(R.id.statuss);
+            thumb_image = (TextView)itemView.findViewById(R.id.thumb_imagee);
+
 
 
             delete1=(ImageView)itemView.findViewById(R.id.delete_charity);
+            edit1=(ImageView)itemView.findViewById(R.id.edit_charity);
         }
 
 

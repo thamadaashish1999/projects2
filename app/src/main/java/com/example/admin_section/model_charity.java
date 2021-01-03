@@ -2,15 +2,16 @@ package com.example.admin_section;
 
 public class model_charity {
 
-    String charity_name,charityReg,email;
+    String charity_name,charityReg,email,charity_address,description,image,password,phone,post_description,post_image,requirements,status,thumb_image;;
 
     model_charity(){
 
     }
-    public model_charity(String charity_name, String charityReg, String email ) {
+    public model_charity(String charity_name, String charityReg, String email,String ) {
         this.charity_name = charity_name;
         this.charityReg = charityReg;
         this.email = email;
+        this.charity_address=  charity_adderss
     }
 
     public String getCharity_name() {
