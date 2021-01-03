@@ -33,6 +33,16 @@ public class charity_adapter extends FirebaseRecyclerAdapter <model_charity,char
             holder.charity_name.setText(model.getCharity_name());
             holder.charityReg.setText(model.getCharityReg());
             holder.email.setText(model.getEmail());
+            holder.charity_address.setText(model.getCharity_address());
+            holder.description.setText(model.getDescription());
+            holder.image.setText(model.getImage());
+            holder.password.setText(model.getEmail());
+            holder.phone.setText(model.getPhone());
+            holder.requirements.setText(model.getRequirements());
+            holder.status.setText(model.getStatus());
+            holder.post_description.setText(model.getPost_description());
+            holder.post_image.setText(model.getPost_image());
+            holder.thumb_image.setText(model.getPost_image());
 
 
             //edit operation for charity section
