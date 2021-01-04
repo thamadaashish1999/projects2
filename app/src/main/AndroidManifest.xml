@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Admin_section">
-        <activity android:name=".signup_page"></activity>
-        <activity android:name=".login_page" />
         <activity android:name=".MainActivity" />
         <activity android:name=".charity_list" />
         <activity android:name=".donor_list" />
-        <activity android:name=".home">
+        <activity android:name=".home" />
+        <activity android:name=".signup_page"/>
+        <activity android:name=".login_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
