@@ -7,27 +7,29 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class login_page extends AppCompatActivity {
 
-    Button signUP;
+    private Button SignUP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        signUP=(Button)findViewById(R.id.signUP);
+        SignUP=(Button)findViewById(R.id.signUP);
 
-        signUP.setOnClickListener(new View.OnClickListener() {
+        SignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity();
+                openActivity2();
+                Toast.makeText(login_page.this,"DONE !!",Toast.LENGTH_LONG);
             }
         });
     }
-    public void openActivity(){
+    public void openActivity2(){
         Intent intent = new Intent(this, signup_page.class);
         startActivity(intent);
     }
-}
+    }
