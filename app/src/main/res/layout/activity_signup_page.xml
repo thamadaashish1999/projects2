@@ -32,11 +32,10 @@
             app:boxCornerRadiusBottomEnd="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="FIRST NAME"
-                android:maxLength="10"
                 android:inputType="text"
                 />
 
@@ -51,11 +50,10 @@
             app:boxCornerRadiusBottomEnd="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="LAST NAME"
-                android:maxLength="10"
                 android:inputType="text"
                 />
 
@@ -70,7 +68,7 @@
             app:boxCornerRadiusBottomEnd="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="PHONE NO"
@@ -89,12 +87,11 @@
             app:boxCornerRadiusBottomEnd="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="EMAIL"
-                android:maxLength="10"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -108,7 +105,7 @@
             app:boxCornerRadiusBottomEnd="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="USERNAME"
@@ -128,7 +125,7 @@
             app:boxCornerRadiusBottomEnd="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="PASSWORD"

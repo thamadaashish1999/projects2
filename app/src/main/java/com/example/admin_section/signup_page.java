@@ -46,8 +46,10 @@ public class signup_page extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Toast.makeText(signup_page.this,"DONE !!",Toast.LENGTH_SHORT).show();
                 rootnode=FirebaseDatabase.getInstance();
-                reference=rootnode.getReference().child("Users").child("Admin") ;
+                reference=rootnode.getReference("Users").child("Admin");
 
                 //get all details from signup page
 
@@ -59,9 +61,9 @@ public class signup_page extends AppCompatActivity {
                 String admpassword=password.getEditText().getText().toString();
 
                 firebase_store firebaseStore = new firebase_store(admfirst,admlast,admphone,admpassword,admusername,admemail);
-                reference.child(admusername).setValue(firebaseStore);
+                reference.child(admphone).setValue(firebaseStore);
 
-                Toast.makeText(signup_page.this,"DONE !!",Toast.LENGTH_LONG);
+
 
             }
         });

@@ -24,7 +24,7 @@ public class login_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openActivity2();
-                Toast.makeText(login_page.this,"DONE !!",Toast.LENGTH_LONG);
+                Toast.makeText(login_page.this,"DONE !!",Toast.LENGTH_SHORT);
             }
         });
     }
