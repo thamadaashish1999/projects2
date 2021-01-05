@@ -4,21 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     tools:context=".signup_page">
 
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/firstname"
+            android:id="@+id/first_name"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:padding="10dp"
-            android:layout_marginTop="20dp"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
             <EditText
                 android:layout_width="match_parent"
@@ -30,15 +25,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lastname"
+            android:id="@+id/last_name"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_marginTop="20dp"
-            android:focusableInTouchMode="true"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
             >
             <EditText
                 android:layout_width="match_parent"
@@ -50,15 +42,13 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phoneee"
+            android:id="@+id/Phone"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_marginTop="20dp"
-            android:focusableInTouchMode="true"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+
             >
             <EditText
                 android:layout_width="match_parent"
@@ -70,15 +60,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailll"
+            android:id="@+id/Email"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_marginTop="20dp"
-            android:focusableInTouchMode="true"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
             >
             <EditText
                 android:layout_width="match_parent"
@@ -90,15 +77,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/usernameee"
+            android:id="@+id/Username"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_marginTop="20dp"
-            android:focusableInTouchMode="true"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
             >
             <EditText
                 android:layout_width="match_parent"
@@ -110,16 +94,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passworddd"
+            android:id="@+id/Password"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_marginTop="20dp"
-            android:focusableInTouchMode="true"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
             app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
             <EditText
                 android:layout_width="match_parent"
@@ -132,7 +112,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/signIN"
+            android:id="@+id/SIGNIN"
             android:layout_height="55dp"
             android:layout_width="200dp"
             android:layout_marginTop="30dp"
